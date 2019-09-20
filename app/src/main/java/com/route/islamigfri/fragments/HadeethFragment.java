@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.route.islamigfri.R;
@@ -36,6 +38,11 @@ public class HadeethFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_hadeeth, container, false);
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        realAllHadeth();
+    }
 
     public List<HadethItem> realAllHadeth(){
         List<HadethItem> allHadeth=new ArrayList<>();
